@@ -1,0 +1,27 @@
+Jumpers
+LEDs
+GLCD Display Place
+microBoard socket
+LCD display place
+Push Buttons
+Piezo Buzzer
+MCC_SD card connector
+Processor
+ProcessorPlace
+Buzzer
+Ports
+DisplayEasyTFT
+DebugUSB
+Joystick
+ButtonPressLevel
+PlataGreenWithProcessor
+PlataGreenWithoutProcessor
+PlataBlue
+PlataOrange
+Platamicroboard
+Digit
+DebugOrange
+DebugBlue
+PortsBlueOrange
+DisplayBlue
+click
