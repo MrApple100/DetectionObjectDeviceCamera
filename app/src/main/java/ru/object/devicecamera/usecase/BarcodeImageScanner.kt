@@ -1,7 +1,7 @@
-package ru.`object`.detection.usecase
+package ru.`object`.devicecamera.usecase
 
 import android.graphics.Bitmap
-import ru.`object`.detection.extension.orZero
+import ru.`object`.devicecamera.extension.orZero
 import com.google.zxing.BinaryBitmap
 import com.google.zxing.MultiFormatReader
 import com.google.zxing.RGBLuminanceSource
@@ -14,7 +14,7 @@ import io.reactivex.schedulers.Schedulers
 object BarcodeImageScanner {
     private var bitmapBuffer: IntArray? = null
 
-    fun parse(image: Bitmap): Single<Result> {
+ fun  parse(image: Bitmap): Single<Result> {
         return Single
             .create<Result> { emitter ->
                 parse(image, emitter)

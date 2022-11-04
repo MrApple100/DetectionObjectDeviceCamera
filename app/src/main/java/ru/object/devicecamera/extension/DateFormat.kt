@@ -1,4 +1,4 @@
-package ru.`object`.detection.extension
+package ru.`object`.devicecamera.extension
 
 import java.text.DateFormat
 import java.util.*

@@ -35,7 +35,7 @@
             </TextView>
         </androidx.camera.view.PreviewView>
 
-        <ru.object.detection.util.view.RecognitionResultOverlayView
+        <ru.object.devicecamera.util.view.RecognitionResultOverlayView
             android:id="@+id/result_overlay"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />

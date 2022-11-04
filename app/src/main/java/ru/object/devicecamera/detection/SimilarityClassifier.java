@@ -13,7 +13,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ==============================================================================*/
 
-package ru.object.detection.detection;
+package ru.object.devicecamera.detection;
 
 import android.graphics.Bitmap;
 import android.graphics.RectF;

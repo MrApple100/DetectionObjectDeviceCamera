@@ -1,4 +1,4 @@
-package ru.`object`.detection.extension
+package ru.`object`.devicecamera.extension
 
 import org.apache.commons.codec.binary.Base32
 

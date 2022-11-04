@@ -1,10 +1,9 @@
-package ru.`object`.detection.util
+package ru.`object`.devicecamera.util
 
 import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.ImageFormat
 import android.graphics.Rect
-import android.media.Image
 import android.renderscript.Allocation
 import android.renderscript.Element
 import android.renderscript.RenderScript

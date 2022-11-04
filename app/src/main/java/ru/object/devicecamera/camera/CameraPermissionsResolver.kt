@@ -1,4 +1,4 @@
-package ru.`object`.detection.camera
+package ru.`object`.devicecamera.camera
 
 import android.Manifest
 import android.content.pm.PackageManager

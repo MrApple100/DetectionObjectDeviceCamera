@@ -1,9 +1,9 @@
-package ru.`object`.detection.camera
+package ru.`object`.devicecamera.camera
 
 import android.content.Context
 import android.graphics.*
-import ru.`object`.detection.detection.DetectionResult
-import ru.`object`.detection.util.ImageUtil
+import ru.`object`.devicecamera.detection.DetectionResult
+import ru.`object`.devicecamera.util.ImageUtil
 
 class DebugHelper(
     private val saveResult: Boolean,
