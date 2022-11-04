@@ -147,7 +147,7 @@ class ObjectDetectorAnalyzer(
                     Log.d("Barcode","error")
                 }
 
-            ).addTo(scanDispose)
+            )/*.addTo(scanDispose)*/
 
 
 
