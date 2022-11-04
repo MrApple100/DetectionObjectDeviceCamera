@@ -59,7 +59,7 @@
 -->
 
         <activity
-            android:name="ru.object.detection.ObjectRecognitionActivity"
+            android:name="ru.object.devicecamera.ObjectRecognitionActivity"
             android:label="@string/activity_name_detection"
             android:exported="true"
 

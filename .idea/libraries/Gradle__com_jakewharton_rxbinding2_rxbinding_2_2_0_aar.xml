@@ -1,9 +1,13 @@
 <component name="libraryTable">
   <library name="Gradle: com.jakewharton.rxbinding2:rxbinding:2.2.0@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/67784b3cc721c3f9251976b80d6020fe/transformed/jetified-rxbinding-2.2.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/67784b3cc721c3f9251976b80d6020fe/transformed/jetified-rxbinding-2.2.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/67784b3cc721c3f9251976b80d6020fe/transformed/jetified-rxbinding-2.2.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/147406dd807b6e8f863406ef9b232695/transformed/jetified-rxbinding-2.2.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/147406dd807b6e8f863406ef9b232695/transformed/jetified-rxbinding-2.2.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/147406dd807b6e8f863406ef9b232695/transformed/jetified-rxbinding-2.2.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/68d00f1b8561f03e9f0dd167f91bcc15/transformed/jetified-rxbinding-2.2.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/bc508688adcccb119c5c95298fc6eebc/transformed/jetified-rxbinding-2.2.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/bc508688adcccb119c5c95298fc6eebc/transformed/jetified-rxbinding-2.2.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/bc508688adcccb119c5c95298fc6eebc/transformed/jetified-rxbinding-2.2.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jakewharton.rxbinding2/rxbinding/2.2.0/2451ae574a8c45f839f95290ab58975ee469ca03/rxbinding-2.2.0-javadoc.jar!/" />
