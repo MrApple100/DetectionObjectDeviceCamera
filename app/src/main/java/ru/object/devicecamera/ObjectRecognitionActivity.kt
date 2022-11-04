@@ -1,9 +1,9 @@
-package ru.`object`.detection
+package ru.`object`.devicecamera
 
-import android.graphics.Rect
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.camera.core.AspectRatio
 import androidx.camera.core.CameraSelector
@@ -16,8 +16,9 @@ import com.google.android.material.snackbar.Snackbar
 import com.google.zxing.Result
 import kotlinx.android.synthetic.main.activity_object_recognition.*
 import org.tensorflow.lite.examples.detection.R
-import ru.`object`.detection.camera.CameraPermissionsResolver
-import ru.`object`.detection.camera.ObjectDetectorAnalyzer
+import ru.`object`.devicecamera.camera.CameraPermissionsResolver
+import ru.`object`.devicecamera.camera.ObjectDetectorAnalyzer
+import ru.`object`.devicecamera.util.view.Scenery
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 
@@ -72,6 +73,7 @@ class ObjectRecognitionActivity : AppCompatActivity() {
     }
 
     private fun bindCamera(cameraProvider: ProcessCameraProvider) {
+
         val preview = Preview.Builder()
                 .setTargetAspectRatio(AspectRatio.RATIO_4_3)
                 .build()
@@ -109,12 +111,13 @@ class ObjectRecognitionActivity : AppCompatActivity() {
         )
     }
 
-    private fun onDetectionResult(result: ObjectDetectorAnalyzer.Result, barcoderesult: Result?,handbound:Array<IntArray>?) {
-        result_overlay.updateResults(result,barcoderesult,handbound)
+    private fun onDetectionResult(result: ObjectDetectorAnalyzer.Result, barcoderesult: Result?,handbound:Array<IntArray>?,isDark:Boolean,scenery: Scenery):Boolean {
+        result_overlay.updateResults(result,barcoderesult,handbound,isDark,scenery)
+        return true;
     }
 
     private fun showSnackbar(message: String) {
-        Snackbar.make(root_container, message, Snackbar.LENGTH_LONG).show()
+       // Snackbar.make(root_container, message, Snackbar.LENGTH_LONG).show()
     }
 
 
