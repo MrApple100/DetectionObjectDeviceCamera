@@ -1,12 +1,11 @@
 package ru.`object`.devicecamera.util.view
 
-import ru.`object`.devicecamera.camera.ObjectDetectorAnalyzer
-import ru.`object`.devicecamera.detection.DetectionResult
-import ru.`object`.devicecamera.util.DetectorUtils
-
 
 import android.content.Context
-import android.graphics.*
+import android.graphics.Bitmap
+import android.graphics.Canvas
+import android.graphics.Color
+import android.graphics.Paint
 import android.util.AttributeSet
 import android.util.Log
 import android.view.View
@@ -21,6 +20,9 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.runBlocking
 import org.tensorflow.lite.examples.detection.R
+import ru.`object`.devicecamera.camera.ObjectDetectorAnalyzer
+import ru.`object`.devicecamera.detection.DetectionResult
+import ru.`object`.devicecamera.util.DetectorUtils
 import java.util.*
 
 
@@ -33,7 +35,7 @@ class RecognitionResultOverlayView @JvmOverloads constructor(
     var ar: Int = Color.argb(alphaColor, 255, 0, 0)
     var ag: Int = Color.argb(alphaColor, 0, 255, 0)
     var ab: Int = Color.argb(alphaColor, 0, 0, 255)
-    var halfdark: Int = Color.argb(40, 0, 0, 0)
+    var halfdark: Int = Color.argb(70, 0, 0, 0)
 
 
     private var objectsDetectedOld = HashMap<String,Int>()
@@ -122,6 +124,8 @@ class RecognitionResultOverlayView @JvmOverloads constructor(
 
     var scaleFactorX = 1f
     var scaleFactorY = 1f
+
+    var webViewheight = 4000;
 
     fun updateResults(result: ObjectDetectorAnalyzer.Result, barcoderesult: Result?,handbound:Array<IntArray>?,isDark:Boolean,scenery: Scenery) {
         if(isDark){
@@ -469,13 +473,11 @@ class RecognitionResultOverlayView @JvmOverloads constructor(
 
                     //работа с barcoderesult
                     if (barcoderesult != null) {
-                        if (barcoderesult!!.text.isNotEmpty() && !onthescene) {
-                            onthescene = true
+                        if (barcoderesult!!.text.isNotEmpty() && webView.visibility== INVISIBLE) {
                             Log.d("barcodetext", barcoderesult!!.text)
                             if (barcoderesult!!.text.contains("http")) {
                                 // runBlocking(Dispatchers.Default){
-                                val pair =
-                                    bartextTolink.find { it -> it.first == (barcoderesult?.text) }
+                                val pair = bartextTolink.find { it -> it.first == (barcoderesult?.text) }
                                 if (pair != null) {
                                     showPdfOnPage(pair.second)
                                 }
@@ -608,9 +610,12 @@ class RecognitionResultOverlayView @JvmOverloads constructor(
         Log.d("SWIPE","DOWN"+ " ${currentY.value}")
 
         canvas.drawCircle(100.0f,100.0f,10.0f,boxPaint)
-        currentY.value +=500
-
+        currentY.value += 500
+        if(currentY.value+500>webViewheight) {
+            currentY.value=webViewheight
+        }
         webView.scrollY = currentY.value
+
 
 
     }
@@ -623,7 +628,10 @@ class RecognitionResultOverlayView @JvmOverloads constructor(
                 view.loadUrl(url)
                 return true
             }
+
+
         }
+
         webView.loadUrl(LinkTo)
         webView.scrollY = currentY.value
 
