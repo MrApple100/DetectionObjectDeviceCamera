@@ -246,11 +246,11 @@ class  ObjectDetectorAnalyzer (
         }
         Log.d("DARKDARK","NowDark "+howdark.toFloat()/(width * height))
 
-        return howdark>(width * height)/2
+        return howdark>(width * height)/100*95
     }
     fun DarkRule(hsb: FloatArray): Boolean {
 
-        return  hsb[2] <0.05f
+        return  hsb[2] <0.01f
     }
     private fun recognizeColorInCenter(rgbBitmap: Bitmap): Array<Float> {
         val height = rgbBitmap.height
