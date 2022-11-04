@@ -17,7 +17,7 @@ android {
 
 
     defaultConfig {
-        applicationId "ru.object.detection"
+        applicationId "ru.object.detection.device.camera"
         minSdk 21
         targetSdkVersion 31
         versionCode 4

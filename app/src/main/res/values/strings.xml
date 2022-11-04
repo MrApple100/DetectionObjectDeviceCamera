@@ -1,9 +1,11 @@
 <resources>
-    <string name="app_name">ObjectDetectionDemoDeviceCamera</string>
+    <string name="app_name">EpsonPlataDeviceCamera</string>
     <string name="description_info">tflite object detection</string>
     <string name="request_permission">This app needs camera permission.</string>
 
     <string name="Find_processor">Найдите процессор</string>
     <string name="Insert_to_place">Вставьте процессор в плату</string>
     <string name="Congratulation">Успешно выполнено</string>
+    <string name="RecognizeColor">Определение цвета</string>
+    <string name="MayStart">Можно Начинать</string>
 </resources>
